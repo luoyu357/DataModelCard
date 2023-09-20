@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Editor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="json-editor"></div>
+    <button onclick="submitData()">Update</button>
+
+    <script>
+        let data = {{ data|tojson|safe }};
+
+        function renderEditor(container, jsonData) {
+            for (let key in jsonData) {
+                const value = jsonData[key];
+                if (Array.isArray(value)) {
+                    const div = document.createElement('div');
+                    div.innerHTML = `
+                        <fieldset>
+                            <legend>${key}</legend>
+                            <button onclick="addToArray(this)">Add To Array</button>
+                        </fieldset>
+                    `;
+                    container.appendChild(div);
+                    value.forEach((val) => {
+                        const fieldDiv = document.createElement('div');
+                        fieldDiv.innerHTML = `<input type="text" data-array="${key}" value="${val}">`;
+                        div.querySelector('fieldset').appendChild(fieldDiv);
+                    });
+                } else if (typeof value === 'object') {
+                    const div = document.createElement('div');
+                    div.innerHTML = `<strong>${key}</strong> <button onclick="addNewFieldToObj(this, '${key}')">Add To Object</button>`;
+                    container.appendChild(div);
+                    renderEditor(div, value);
+                } else {
+                    container.innerHTML += `
+                        <fieldset>
+                        <div>
+                            <label>${key}:</label>
+                            <input type="text" data-key="${key}" value="${value}">
+                        </div>
+                        </fieldset>
+                    `;
+                }
+            }
+        }
+
+        function addNewField() {
+            const key = prompt("Enter the field name");
+            const value = prompt(`Enter value for ${key}`);
+            data[key] = value;
+            renderEditor(document.getElementById('json-editor'), data);
+        }
+
+        function addToArray(button) {
+            const arrayKey = button.previousElementSibling.textContent.trim();
+            const value = prompt(`Enter new value for ${arrayKey} array`);
+            const data = gatherData(document.getElementById('json-editor'));
+            if (data[arrayKey]) {
+                data[arrayKey].push(value);
+                const editorElement = document.getElementById('json-editor');
+                editorElement.innerHTML = ''; // Clear the contents of the element
+                renderEditor(editorElement, data);
+            }
+        }
+
+        function addNewFieldToObj(button, parentKey) {
+            const key = prompt("Enter the field name");
+            const value = prompt(`Enter value for ${key}`);
+            const data = gatherData(document.getElementById('json-editor'));
+            if (data[parentKey]) {
+                data[parentKey][key] = value;
+                renderEditor(document.getElementById('json-editor'), data);
+            }
+        }
+
+        function gatherData(container) {
+            let obj = {};
+            Array.from(container.children).forEach(child => {
+                const keyInput = child.querySelector('input[data-key]');
+                const arrayInput = child.querySelector('input[data-array]');
+                if (keyInput) {
+                    const key = keyInput.dataset.key;
+                    obj[key] = isNaN(keyInput.value) ? keyInput.value : Number(keyInput.value);
+                } else if (arrayInput) {
+                    const arrayInputs = container.querySelectorAll('input[data-array]');
+                        arrayInputs.forEach(arrayInput => {
+                            const key = arrayInput.dataset.array;
+
+                            if (!obj[key]) {
+                                obj[key] = [];
+                            }
+
+                            let value = arrayInput.value;
+                            // Push either a string or a number, based on the value
+                            obj[key].push(isNaN(value) ? value : Number(value));
+                        });
+                } else if (child.querySelector('strong')) {
+                    const key = child.querySelector('strong').textContent.trim();
+                    obj[key] = gatherData(child);
+                } else if (child.querySelector('fieldset')){
+                    const key = child.querySelector('fieldset').textContent.trim();
+                    obj[key] = gatherData(child);
+                }
+            });
+            return obj;
+        }
+
+        function submitData() {
+            const updatedData = gatherData(document.getElementById('json-editor'));
+            fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedData)
+            }).then(response => response.json()).then(data => {
+                if (data.success) {
+                    alert('Data updated successfully!');
+                } else {
+                    alert('Error updating data.');
+                }
+            });
+        }
+
+        renderEditor(document.getElementById('json-editor'), data);
+    </script>
+</body>

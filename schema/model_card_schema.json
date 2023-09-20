@@ -1,0 +1,491 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "model_card_metadata": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "keyword": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "licence": {
+            "type": "string"
+          },
+          "persistent_identifier": {
+            "type": "string"
+          },
+          "deposit_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "version",
+          "keyword",
+          "description",
+          "publisher",
+          "location",
+          "licence",
+          "persistent_identifier",
+          "deposit_date"
+        ]
+    },
+    "data_collection": {
+      "type": "object",
+      "properties": {
+        "data_source_annotation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data_source_annotation"
+      ]
+    },
+    "data_processing": {
+      "type": "object",
+      "properties": {
+        "data_clearn_algorithm": {
+          "type": "string"
+        },
+        "feature_engineering_algorithm": {
+          "type": "string"
+        },
+        "data_transformation_algorithm": {
+          "type": "string"
+        },
+        "data_augmentation_algorithm": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data_clearn_algorithm",
+        "feature_engineering_algorithm",
+        "data_transformation_algorithm",
+        "data_augmentation_algorithm"
+      ]
+    },
+    "model_selection": {
+      "type": "object",
+      "properties": {
+        "model_metadata": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "owner": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "license": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "version",
+            "description",
+            "owner",
+            "location",
+            "license"
+          ]
+        },
+        "algorithm_selection_algorithm": {
+          "type": "string"
+        },
+        "hyperparameter_tuning_algorithm": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "model_metadata",
+        "algorithm_selection_algorithm",
+        "hyperparameter_tuning_algorithm"
+      ]
+    },
+    "model_training": {
+      "type": "object",
+      "properties": {
+        "training_data": {
+          "type": "string"
+        },
+        "training_data_explianer": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "value"
+              ]
+            }
+          ]
+        },
+        "validate_data_algorithm": {
+          "type": "string"
+        },
+        "mode_selection": {
+          "type": "object",
+          "properties": {
+            "model_metadata": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "string"
+                },
+                "license": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "version",
+                "description",
+                "owner",
+                "location",
+                "license"
+              ]
+            },
+            "algorithm_selection_algorithm": {
+              "type": "string"
+            },
+            "hyperparameter_tuning_algorithm": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "model_metadata",
+            "algorithm_selection_algorithm",
+            "hyperparameter_tuning_algorithm"
+          ]
+        },
+        "training_algorithm": {
+          "type": "string"
+        },
+        "model_output": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "owner": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "version",
+            "description",
+            "owner",
+            "location"
+          ]
+        }
+      },
+      "required": [
+        "training_data",
+        "training_data_explainer",
+        "validate_data_algorithm",
+        "mode_selection",
+        "training_algorithm"
+      ]
+    },
+    "model_evaluation": {
+      "type": "object",
+      "properties": {
+        "testing_data": {
+          "type": "string"
+        },
+        "evaluate_data_algorithm": {
+          "type": "string"
+        },
+        "performance_metrics": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "metrics_name": {
+                  "type": "string"
+                },
+                "related_feature": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "metrics_name",
+                "related_feature",
+                "value"
+              ]
+            }
+          ]
+        },
+        "bias_and_fairness_evaluation": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "fairness_metrics": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "metrics_name": {
+                          "type": "string"
+                        },
+                        "related_feature": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "metrics_name",
+                        "related_feature",
+                        "value"
+                      ]
+                    }
+                  ]
+                },
+                "adversarial_testing": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "independent_of_attributes": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "feasibility": {
+                          "type": "boolean"
+                        },
+                        "performance_metrics": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "metrics_name": {
+                                  "type": "string"
+                                },
+                                "related_feature": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "metrics_name",
+                                "related_feature",
+                                "value"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "independent_of_attributes",
+                        "feasibility",
+                        "performance_metrics"
+                      ]
+                    }
+                  ]
+                },
+                "interpretability_tools": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "metrics_name": {
+                          "type": "string"
+                        },
+                        "related_feature": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "metrics_name",
+                        "related_feature",
+                        "value"
+                      ]
+                    }
+                  ]
+                },
+                "feedback_mechanisms": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "metrics_name": {
+                          "type": "string"
+                        },
+                        "related_feature": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "metrics_name",
+                        "related_feature",
+                        "value"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "fairness_metrics",
+                "adversarial_testing",
+                "interpretability_tools",
+                "feedback_mechanisms"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "testing_data",
+        "evaluate_data_algorithm",
+        "performance_metrics",
+        "bias_and_fairness_evaluation"
+      ]
+    },
+    "model_deployment": {
+      "type": "object",
+      "properties": {
+        "deployment_platform": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "value"
+              ]
+            }
+          ]
+        },
+        "APIs": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deployment_platform",
+        "APIs"
+      ]
+    },
+    "provenance": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "provenance_field": {
+              "type": "string"
+            },
+            "link_to_ids": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "provenance_field",
+            "link_to_ids"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "model_card_metadata",
+    "data_collection",
+    "data_processing",
+    "model_selection",
+    "model_training",
+    "model_evaluation",
+    "model_deployment",
+    "provenance"
+  ]
+}

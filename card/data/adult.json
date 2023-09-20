@@ -1,0 +1,2054 @@
+{
+    "card_metadata": {
+        "name": "adult.data",
+        "version": "Input Required",
+        "keyword": [
+            "Input Required"
+        ],
+        "description": "Input Required",
+        "publisher": "Input Required",
+        "location": "./sample/adult/adult.data",
+        "licence": "Input Required (user)",
+        "persistent_identifier": "Input Required",
+        "deposit_date": "08/23/2023, 21:20:05"
+    },
+    "data": {
+        "data_metadata": {
+            "name": "adult.data",
+            "owner": "Input Required",
+            "location": "./sample/adult/adult.data",
+            "description": "Input Required",
+            "persistent_identifier": "Input Required",
+            "dataset_characteristics": [
+                "Input Required"
+            ],
+            "subject_area": [
+                "Input Required"
+            ],
+            "associated_tasks": [
+                "Input Required"
+            ],
+            "attribute_type": [
+                "int64",
+                "object"
+            ],
+            "instances_number": 488415,
+            "attributes_number": 15
+        },
+        "features": [
+            {
+                "name": "age",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "38.58164675532078",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "13.640432553581341",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "17.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "28.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "37.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "48.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "90.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "workclass",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "State-gov",
+                        "Self-emp-not-inc",
+                        "Private",
+                        "Federal-gov",
+                        "Local-gov",
+                        "nan",
+                        "Self-emp-inc",
+                        "Without-pay",
+                        "Never-worked"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.05638647461687295",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "fnlwgt",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "189778.36651208502",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "105549.97769702224",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "12285.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "117827.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "178356.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "237051.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "1484705.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "education",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "education-num",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "10.0806793403151",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "2.5727203320673877",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "1.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "9.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "10.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "12.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "16.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "marital-status",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Never-married",
+                        "Married-civ-spouse",
+                        "Divorced",
+                        "Married-spouse-absent",
+                        "Separated",
+                        "Married-AF-spouse",
+                        "Widowed"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "occupation",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.056601455729246644",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "relationship",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Not-in-family",
+                        "Husband",
+                        "Wife",
+                        "Own-child",
+                        "Unmarried",
+                        "Other-relative"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "race",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "White",
+                        "Black",
+                        "Asian-Pac-Islander",
+                        "Amer-Indian-Eskimo",
+                        "Other"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "sex",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Male",
+                        "Female"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "capital-gain",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "1077.6488437087312",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "7385.292084840338",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "99999.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.9167101747489328",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "capital-loss",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "87.303829734959",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "402.9602186489998",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "4356.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.9533490986149074",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "hours-per-week",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "40.437455852092995",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "12.347428681731843",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "1.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "40.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "40.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "45.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "99.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "native-country",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0179048555019809",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "class",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "<=50K",
+                        ">50K"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "Input Required",
+                "link_to_ids": [
+                    "Input Required"
+                ]
+            }
+        ]
+    },
+    "train_data": {
+        "name": "adult.data",
+        "location": "./sample/adult/adult.data",
+        "instances_number": 488415,
+        "persistent_identifier": "Input Required",
+        "features": [
+            {
+                "name": "age",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "38.58164675532078",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "13.640432553581341",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "17.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "28.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "37.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "48.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "90.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "workclass",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "State-gov",
+                        "Self-emp-not-inc",
+                        "Private",
+                        "Federal-gov",
+                        "Local-gov",
+                        "nan",
+                        "Self-emp-inc",
+                        "Without-pay",
+                        "Never-worked"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.05638647461687295",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "fnlwgt",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "189778.36651208502",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "105549.97769702224",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "12285.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "117827.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "178356.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "237051.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "1484705.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "education",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "education-num",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "10.0806793403151",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "2.5727203320673877",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "1.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "9.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "10.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "12.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "16.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "marital-status",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Never-married",
+                        "Married-civ-spouse",
+                        "Divorced",
+                        "Married-spouse-absent",
+                        "Separated",
+                        "Married-AF-spouse",
+                        "Widowed"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "occupation",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.056601455729246644",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "relationship",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Not-in-family",
+                        "Husband",
+                        "Wife",
+                        "Own-child",
+                        "Unmarried",
+                        "Other-relative"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "race",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "White",
+                        "Black",
+                        "Asian-Pac-Islander",
+                        "Amer-Indian-Eskimo",
+                        "Other"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "sex",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Male",
+                        "Female"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "capital-gain",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "1077.6488437087312",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "7385.292084840338",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "99999.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.9167101747489328",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "capital-loss",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "87.303829734959",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "402.9602186489998",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "4356.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.9533490986149074",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "hours-per-week",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "32561.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "40.437455852092995",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "12.347428681731843",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "1.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "40.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "40.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "45.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "99.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "native-country",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0179048555019809",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "class",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "<=50K",
+                        ">50K"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "Input Required",
+                "link_to_ids": [
+                    "Input Required"
+                ]
+            }
+        ]
+    },
+    "test_data": {
+        "name": "adult.test",
+        "location": "./sample/adult/adult.test",
+        "instances_number": 244215,
+        "persistent_identifier": "Input Required",
+        "features": [
+            {
+                "name": "age",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "16281.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "38.76745900128985",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "13.849186814264343",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "17.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "28.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "37.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "48.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "90.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "workclass",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Private",
+                        "Local-gov",
+                        "nan",
+                        "Self-emp-not-inc",
+                        "Federal-gov",
+                        "State-gov",
+                        "Self-emp-inc",
+                        "Without-pay",
+                        "Never-worked"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.05914870093974572",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "fnlwgt",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "16281.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "189435.6777839199",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "105714.9076708327",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "13492.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "116736.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "177831.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "238384.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "1490400.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "education",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "education-num",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "16281.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "10.07290706959032",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "2.567545258667683",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "1.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "9.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "10.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "12.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "16.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "marital-status",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Never-married",
+                        "Married-civ-spouse",
+                        "Widowed",
+                        "Divorced",
+                        "Separated",
+                        "Married-spouse-absent",
+                        "Married-AF-spouse"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "occupation",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.05933296480560162",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "relationship",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Own-child",
+                        "Husband",
+                        "Not-in-family",
+                        "Unmarried",
+                        "Wife",
+                        "Other-relative"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "race",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Black",
+                        "White",
+                        "Asian-Pac-Islander",
+                        "Other",
+                        "Amer-Indian-Eskimo"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "sex",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "Male",
+                        "Female"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "capital-gain",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "16281.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "1081.9051041090843",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "7583.935967887084",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "99999.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.9187396351575456",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "capital-loss",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "16281.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "87.89926908666544",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "403.10528562931455",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "3770.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.9531355567839813",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "hours-per-week",
+                "type": "int64",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "count",
+                        "result": "16281.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "mean",
+                        "result": "40.392236349118605",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "std",
+                        "result": "12.479332247112273",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "min",
+                        "result": "1.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "25%",
+                        "result": "40.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "50%",
+                        "result": "40.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "75%",
+                        "result": "45.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "max",
+                        "result": "99.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "native-country",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": true,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.01682943308150605",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            },
+            {
+                "name": "class",
+                "type": "object",
+                "demographic": "Input Required",
+                "description": "Input Required",
+                "units": "Input Required",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "<=50K.",
+                        ">50K."
+                    ],
+                    "additional_info": "Input Required"
+                },
+                "analyses": [
+                    {
+                        "function_name": "Percentage of Zero",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    },
+                    {
+                        "function_name": "Percentage of Missing",
+                        "result": "0.0",
+                        "bias_explainer": "Input Required"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "Input Required",
+                "link_to_ids": [
+                    "Input Required"
+                ]
+            }
+        ]
+    },
+    "provenance": [
+        {
+            "provenance_field": "Input Required",
+            "link_to_ids": [
+                "Input Required"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "data_card_metadata": {
+        "name": "test",
+        "version": "v1.0.0",
+        "keyword": [
+            "test",
+            "draft"
+        ],
+        "description": "this is a test data card",
+        "publisher": "Yu Luo",
+        "location": "dummy location",
+        "licence": "Input Required (user)",
+        "persistent_identifier": "pid/1",
+        "deposit_date": "08/30/2023, 22:56:44"
+    },
+    "data": {
+        "data_metadata": {
+            "name": "Heart Disease",
+            "owner": "kaggle",
+            "location": "url",
+            "description": "this is a test dataset",
+            "persistent_identifier": "pid/1",
+            "dataset_characteristics": [
+                "Multivariate"
+            ],
+            "subject_area": [
+                "health"
+            ],
+            "associated_tasks": [
+                "classfication",
+                "regression"
+            ],
+            "attribute_type": [
+                "categorical",
+                "integer"
+            ],
+            "instances_number": 200,
+            "attributes_number": 10
+        },
+        "features": [
+            {
+                "name": "age",
+                "type": "Integer",
+                "demographic": "Age",
+                "description": "N/A",
+                "units": "N/A",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "this is a test"
+                },
+                "analyses": [
+                    {
+                        "function_name": "mean",
+                        "result": "123",
+                        "bias_explainer": "good result"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "test",
+                "link_to_ids": [
+                    "test"
+                ]
+            }
+        ]
+    },
+    "train_data": {
+        "name": "train data",
+        "location": "file location",
+        "instances_number": 40,
+        "persistent_identifier": "1",
+        "features": [
+            {
+                "name": "age",
+                "type": "Integer",
+                "demographic": "Age",
+                "description": "N/A",
+                "units": "N/A",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "this is a test"
+                },
+                "analyses": [
+                    {
+                        "function_name": "mean",
+                        "result": "123",
+                        "bias_explainer": "good result"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "test",
+                "link_to_ids": [
+                    "test"
+                ]
+            }
+        ]
+    },
+    "test_data": {
+        "name": "test data",
+        "location": "file loation",
+        "instances_number": 30,
+        "persistent_identifier": "1",
+        "features": [
+            {
+                "name": "age",
+                "type": "Integer",
+                "demographic": "Age",
+                "description": "N/A",
+                "units": "N/A",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "this is a test"
+                },
+                "analyses": [
+                    {
+                        "function_name": "mean",
+                        "result": "123",
+                        "bias_explainer": "good result"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "test",
+                "link_to_ids": [
+                    "test"
+                ]
+            }
+        ]
+    },
+    "provenance": [
+        {
+            "provenance_field": "test",
+            "link_to_ids": [
+                "test"
+            ]
+        }
+    ]
+}

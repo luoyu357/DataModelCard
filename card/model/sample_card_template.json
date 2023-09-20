@@ -1,0 +1,132 @@
+{
+    "model_card_metadata": {
+        "name": "test",
+        "version": "v1",
+        "keyword": [
+            "test"
+        ],
+        "description": "this is a test",
+        "publisher": "Yu Luo",
+        "location": "file system",
+        "licence": "license",
+        "persistent_identifier": "pid/1",
+        "deposit_date": "08/31/2023, 16:26:39"
+    },
+    "data_collection": {
+        "data_source_annotation": "Data Card PID"
+    },
+    "data_processing": {
+        "data_clearn_algorithm": "code",
+        "feature_engineering_algorithm": "code",
+        "data_transformation_algorithm": "code",
+        "data_augmentation_algorithm": "code"
+    },
+    "model_selection": {
+        "model_metadata": {
+            "name": "classification for adult data",
+            "version": "v1",
+            "description": "this is a test",
+            "owner": "Yu Luo",
+            "location": "url of document or other things",
+            "license": "license"
+        },
+        "algorithm_selection_algorithm": "code",
+        "hyperparameter_tuning_algorithm": "code"
+    },
+    "model_training": {
+        "training_data": "Training Data PID",
+        "training_data_explainer": [
+            {
+                "key": "target feature",
+                "value": "feature"
+            }
+        ],
+        "validate_data_algorithm": "code",
+        "mode_selection": {
+            "model_metadata": {
+                "name": "classification for adult data",
+                "version": "v1",
+                "description": "this is a test",
+                "owner": "Yu Luo",
+                "location": "url of document or other things",
+                "license": "license"
+            },
+            "algorithm_selection_algorithm": "code",
+            "hyperparameter_tuning_algorithm": "code"
+        },
+        "training_algorithm": "code",
+        "model_output": {
+            "name": "output model file",
+            "version": "v1",
+            "description": "this is a test",
+            "owner": "Yu Luo",
+            "location": "where we save the model file (pt or other files)"
+        }
+    },
+    "model_evaluation": {
+        "testing_data": "Testing Data PID",
+        "evaluate_data_algorithm": "code",
+        "performance_metrics": [
+            {
+                "metrics_name": "Loss",
+                "related_feature": "any feature",
+                "value": "0"
+            }
+        ],
+        "bias_and_fairness_evaluation": [
+            {
+                "fairness_metrics": [
+                    {
+                        "metrics_name": "Loss",
+                        "related_feature": "any feature",
+                        "value": "0"
+                    }
+                ],
+                "adversarial_testing": [
+                    {
+                        "independent_of_attributes": [
+                            "none"
+                        ],
+                        "feasibility": true,
+                        "performance_metrics": [
+                            {
+                                "metrics_name": "Loss",
+                                "related_feature": "any feature",
+                                "value": "0"
+                            }
+                        ]
+                    }
+                ],
+                "interpretability_tools": [
+                    {
+                        "metrics_name": "Loss",
+                        "related_feature": "any feature",
+                        "value": "0"
+                    }
+                ],
+                "feedback_mechanisms": [
+                    {
+                        "metrics_name": "Loss",
+                        "related_feature": "any feature",
+                        "value": "0"
+                    }
+                ]
+            }
+        ]
+    },
+    "model_deployment": {
+        "deployment_platform": [
+            {
+                "key": "system",
+                "value": "Ubuntu"
+            }
+        ],
+        "APIs": "https"
+    },
+    "provenance": [
+        {
+            "provenance_field": "provenance name",
+            "link_to_ids": "anny id"
+        }
+    ]
+}

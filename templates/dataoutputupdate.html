@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit JSON</title>
+</head>
+<body>
+
+<div id="json-editor">
+    <form id="json-form">
+        {% for key, value in data.items() %}
+        <div class="item">
+            <label>{{ key }}:</label>
+            <input type="text" data-key="{{ key }}" value="{{ value }}">
+        </div>
+        {% endfor %}
+        <div id="new-item">
+            <input type="text" id="new-key" placeholder="Key">
+            <input type="text" id="new-value" placeholder="Value">
+        </div>
+        <button type="button" onclick="addNewItem()">Add Item</button>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<script>
+function addNewItem() {
+    const key = document.getElementById('new-key').value;
+    const value = document.getElementById('new-value').value;
+    if (key && value) {
+        const div = document.createElement('div');
+        div.classList.add('item');
+        const label = document.createElement('label');
+        label.textContent = key + ':';
+        const input = document.createElement('input');
+        input.setAttribute('data-key', key);
+        input.value = value;
+        div.appendChild(label);
+        div.appendChild(input);
+        document.getElementById('json-form').insertBefore(div, document.getElementById('new-item'));
+    }
+}
+
+document.getElementById('json-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const items = document.querySelectorAll('input[data-key]');
+    const jsonData = {};
+    items.forEach(item => {
+        jsonData[item.getAttribute('data-key')] = item.value;
+    });
+    fetch('/update', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonData)
+    }).then(response => response.json()).then(data => {
+        if (data.success) {
+            alert('Data updated successfully!');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

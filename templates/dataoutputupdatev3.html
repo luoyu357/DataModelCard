@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit JSON</title>
+<style>
+    .container {
+        margin: 20px;
+    }
+    .fieldset {
+        margin: 10px 0;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container" id="json-editor">
+    <!-- The JSON data will be rendered here -->
+</div>
+
+
+<button onclick="saveData()">Save Changes</button>
+
+<script>
+    const jsonData = {
+        "train_data": {
+        "name": "train data",
+        "location": "file location",
+        "instances_number": 40,
+        "persistent_identifier": "1",
+        "features": [
+            {
+                "name": "age",
+                "type": "Integer",
+                "demographic": "Age",
+                "description": "N/A",
+                "units": "N/A",
+                "missing_value": false,
+                "attribute_explainer": {
+                    "list_of_attribute": [
+                        "continuous"
+                    ],
+                    "additional_info": "this is a test"
+                },
+                "analyses": [
+                    {
+                        "function_name": "mean",
+                        "result": "123",
+                        "bias_explainer": "good result"
+                    }
+                ]
+            }
+        ],
+        "provenance": [
+            {
+                "provenance_field": "test",
+                "link_to_ids": [
+                    "test123123"
+                ]
+            }
+        ]
+    }
+    };
+
+    function renderEditor(container, data) {
+        for (const [key, value] of Object.entries(data)) {
+            const fieldset = document.createElement('fieldset');
+            fieldset.className = 'fieldset';
+            fieldset.innerHTML = `<legend>${key}</legend>`;
+
+            if (Array.isArray(value)) {
+                if (value.every(item => typeof item === 'string')){
+                    fieldset.innerHTML += `<button onclick="addToArray(this)">Add To Array</button>`;
+                    value.forEach((item, index) => {
+                        fieldset.innerHTML += `<div> <input type="text" name="${key}" value="${item}"></div>`;
+                    });
+                } else {
+                    value.forEach((item, index) => {
+                    const fieldset1 = document.createElement('fieldset');
+                    renderEditor(fieldset1, item);
+                    fieldset.appendChild(fieldset1);
+                    });
+                }
+            } else if (typeof value === 'object'  && value !== null) {
+                renderEditor(fieldset, value);
+            } else {
+                fieldset.innerHTML += `<div> <input type="text" name="${key}" value="${value}"></div>`;
+            }
+
+            container.appendChild(fieldset);
+        }
+    }
+
+    function gatherData(container) {
+            let obj = {};
+            Array.from(container.children).forEach(child => {
+                const keyInput = child.querySelector('input[data-key]');
+                const arrayInput = child.querySelector('input[data-array]');
+                if (keyInput) {
+                    const key = keyInput.dataset.key;
+                    obj[key] = isNaN(keyInput.value) ? keyInput.value : Number(keyInput.value);
+                } else if (arrayInput) {
+                    const arrayInputs = container.querySelectorAll('input[data-array]');
+                        arrayInputs.forEach(arrayInput => {
+                            const key = arrayInput.dataset.array;
+
+                            if (!obj[key]) {
+                                obj[key] = [];
+                            }
+
+                            let value = arrayInput.value;
+                            // Push either a string or a number, based on the value
+                            obj[key].push(isNaN(value) ? value : Number(value));
+                        });
+                } else if (child.querySelector('strong')) {
+                    const key = child.querySelector('strong').textContent.trim();
+                    obj[key] = gatherData(child);
+                } else if (child.querySelector('fieldset')){
+                    const key = child.querySelector('fieldset').textContent.trim();
+                    obj[key] = gatherData(child);
+                }
+            });
+            return obj;
+        }
+
+    function addToArray(button) {
+            const arrayKey = button.previousElementSibling.textContent.trim();
+            const value = prompt(`Enter new value for ${arrayKey} array`);
+            const data = gatherData(document.getElementById('json-editor'));
+            if (data[arrayKey]) {
+                data[arrayKey].push(value);
+                const editorElement = document.getElementById('json-editor');
+                // Clear the contents of the element
+                renderEditor(editorElement, data);
+            }
+        }
+
+    function saveData() {
+        const updatedData = gatherData(document.getElementById('json-editor'));
+        console.log('Updated Data:', updatedData);
+        fetch('/update', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedData)
+            }).then(response => response.json()).then(data => {
+                if (data.success) {
+                    alert('Data updated successfully!');
+                } else {
+                    alert('Error updating data.');
+                }
+            });
+        // You can add an AJAX call here to send updatedData to the backend.
+    }
+
+    // Initial render
+    renderEditor(document.getElementById('json-editor'), jsonData);
+</script>
+
+</body>
+</html>

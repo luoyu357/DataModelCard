@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Nested JSON</title>
+</head>
+<body>
+
+<form action="/" method="post">
+    {% for key, value in data.items() %}
+        <fieldset>
+            <legend>{{ key }}</legend>
+            {% if value is mapping %}
+                {% for subkey, subvalue in value.items() %}
+                    <fieldset>
+                    <legend>{{ subkey }}:</legend><p></p>
+                        {% if subvalue is iterable and subvalue is mapping %}
+                            {% for subsubkey, subsubvalue in subvalue.items() %}
+                                {% if subsubvalue is iterable and subsubvalue is not string %}
+                                    <fieldset>
+                                    <legend>{{ subsubkey }}:</legend>
+                                    {% for item in subsubvalue%}
+                                        <p><input type="text" name="{{ key }}_{{ subkey }}_{{ subsubkey }}" value="{{ item }}"><br></p>
+                                    {% endfor %}
+                                    </fieldset>
+                                {% else %}
+                                    <fieldset>
+                                    <legend>{{ subsubkey }}:</legend>
+                                    <p><input type="text" name="{{ key }}_{{ subkey }}_{{ subsubkey }}" value="{{ subsubvalue }}"><br></p>
+                                    </fieldset>
+                                {% endif %}
+                            {% endfor %}
+                        {% elif subvalue is iterable and subvalue is not string %}
+                            {% for item in subvalue %}
+                                {% if item is mapping %}
+                                    <fieldset>
+                                    {% for subsubkey, subsubvalue in item.items() %}
+                                        <fieldset>
+                                        <legend>{{ subsubkey }}:</legend><p></p>
+                                            {% if subsubvalue is iterable and subsubvalue is not string %}
+                                                {% for subitem in subsubvalue %}
+                                                    <p><input type="text" name="{{ key }}_{{ subkey }}_{{subitem}}" value="{{ subitem }}"><br></p>
+                                                {% endfor %}
+                                            {% else %}
+                                                <p><input type="text" name="{{ key }}_{{ subkey }}_{{subsubkey}}" value="{{ subsubvalue }}"><br></p>
+                                            {% endif %}
+                                        </fieldset>
+                                    {% endfor %}
+                                    </fieldset>
+                                {% else %}
+                                    <p><input type="text" name="{{ key }}_{{ subkey }}" value="{{ item }}"><br></p>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <p><input type="text" name="{{ key }}_{{ subkey }}" value="{{ subvalue }}"><br></p>
+                        {% endif %}
+                    </fieldset>
+                {% endfor %}
+            {% else %}
+                {% for item in value %}
+                    {% if item is mapping %}
+                        <fieldset>
+                        {% for subkey, subvalue in item.items() %}
+                            <fieldset>
+                            <legend>{{ subkey }}:</legend><p></p>
+                                {% if subvalue is iterable and subvalue is not string %}
+                                    {% for subitem in subvalue %}
+                                        <p><input type="text" name="{{ key }}_{{ subkey }}" value="{{ subitem }}"><br></p>
+                                    {% endfor %}
+                                {% else %}
+                                    <p><input type="text" name="{{ key }}_{{ subkey }}" value="{{ subvalue }}"><br></p>
+                                {% endif %}
+                            </fieldset>
+                        {% endfor %}
+                        </fieldset>
+                    {% else %}
+                        <p><input type="text" name="{{ key }}" value="{{ item }}"><br></p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </fieldset>
+    {% endfor %}
+    <br>
+    <input type="submit" value="Save Changes">
+</form>
+
+</body>
+</html>
