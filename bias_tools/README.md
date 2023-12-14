@@ -12,3 +12,8 @@
 * What it compares: True Positive rates between different groups
 * Reason to use: If historical data are useful, and extra false positives are much less likely to cause harm than missed true positives, equal opportunity may be useful
 * Caveats: If there are historical biases in the data, then the original labels may hold little value. A large imbalance between the positive and negative classes will also accentuate any statistical issues related to sensitive groups with low membership
+
+## Parity difference 
+* What it compares: comparing the parity (even or odd) of two numbers
+* Reason to use: Determine if two numbers have the same or different parities
+* Caveats: only have two values: 0 (if both numbers have the same parity) or 1 (if the numbers have different parities)

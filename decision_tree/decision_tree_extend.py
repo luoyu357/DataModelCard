@@ -87,8 +87,16 @@ def check_class_balance(data, column_name, unbalance_rate):
         return True
 
 
-print('Balance of age classes: ', check_class_balance(data, 'age', 0.5))
-print('Balance of name classes: ', check_class_balance(data, 'name', 0.5))
+
+
+def check_TP_TN_FP_FN_balance(TP, TN, FP, FN, unbalance_rate):
+    terms = [TP, TN, FP, FN]
+    for index1 in range(len(terms)):
+        for index2 in range(index1+1, len(terms)):
+            relative_difference = abs(terms[index1] - terms[index2]) / max(terms[index1], terms[index2])
+            if relative_difference >= unbalance_rate:
+                return False
+    return True
 
 
 def accuracy(TP, FP, TN, FN, error_rate):
@@ -99,14 +107,14 @@ def accuracy(TP, FP, TN, FN, error_rate):
     # if their values are same or not by adding the error_rate
     if FP == FN:
         return True, result, 'FP and FN are roughly same based on the error rate ' + str(error_rate)
-    elif FP > FN:
-        if FN * (1 + error_rate) >= FP:
-            return True, result, 'FP and FN are roughly same based on the error rate ' + str(error_rate)
     else:
-        if FP * (1 + error_rate) >= FN:
-            return True, result, 'FP and FN are roughly same based on the error rate ' + str(error_rate)
 
-    return False, result, 'FP and FN are not roughly same based on the error rate ' + str(error_rate)
+        relative_difference = abs(FP - FN) / max(FP, FN)
+
+        if relative_difference <= error_rate:
+            return True, result, 'FP and FN are roughly same based on the error rate ' + str(error_rate)
+        else:
+            return False, result, 'FP and FN are not roughly same based on the error rate ' + str(error_rate)
 
 
 
@@ -121,8 +129,6 @@ def accuracy(TP, FP, TN, FN, error_rate):
 
 def precision(TP, FP):
     return TP / ( TP + FP )
-
-
 
 # 3. Recall
 # Importance: More important in situations where minimizing false negatives is the primary concern.
@@ -150,6 +156,16 @@ def F1(TP, FP, FN):
 
 
 
+def FPR(FP, TN):
+    return FP / (FP + TN)
+
+def X(FN, TN):
+    return FN / (FN + TN)
+
+def X1(FN, TP):
+    return FN / (FN + TP)
+
+
 # 1. build the decision tree architecture
 # 2. build a dynamic tree weight for the tree travel
 
@@ -157,11 +173,11 @@ def F1(TP, FP, FN):
 # so for Precision, F1 and Recall, we need to check the FP and FN. if they are lower, mean incorrect prediction is low
 
 
-TP, FP, TN, FN = perf_measure(y_actual, y_pred)
+
 
 # we don't know how low of FP and FN, so run F1 to see the situation
 
-f1 = F1(TP, FP, FN)
+
 
 # F1: 0 - 0.5: poor
 # check FP and FN, run Precision for FP and run Recall for FN.
